@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Document</title>
+    <style>
+        body {
+        font-family: 'Open Sans',Arial,sans-serif;
+        line-height: 1.5;
+        color: hsl(0, 0%, 20%);
+        font-size: 20px;
+        background-color: rgb(231, 231, 231);
+        margin: 0px;
+        }
+
+        h1, h2 {
+        color: #000000;
+        }
+
+        .nav_bar {
+          background-color:gray;
+          width: 100vw;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          position: fixed;
+          left: 0px;
+          top: 0px;
+
+        }
+
+        .nav_item{
+          width:70px;
+          
+          background-color:rgb(40, 71, 40);
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          margin: auto 50px auto 0px;
+        
+        }
+
+        .nav_item a {
+          text-decoration: none;
+          color: white;
+        }
+
+        #navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 150px;
+        height: 100vh;
+        border-style: solid;
+        border-width: 1px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 20px #000;
+        }
+
+        #navbar header {
+        text-align: center;
+        }
+
+        #nav-list {
+        list-style: none;
+        padding-left: 0px;
+        overflow-y:auto;
+        border: 2px solid rgb(85, 85, 85);
+        /* max-height: 70vh; */
+        }
+
+        #nav-list li {
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(85, 85, 85);
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+        width:auto;
+        height: 150px;
+        }
+
+        #nav-list li:hover {
+        /* animation-name: nav-list-item-color;
+        animation-duration: 90ms;
+        animation-fill-mode: forwards; */
+        background-color: rgb(212, 212, 212);
+        transition: 1000ms;
+        }
+
+        
+
+        .nav-link {
+        text-decoration: inherit;
+        color: inherit;
+        }
+
+        main {
+        margin-left: 20vw;
+        margin-right: 2vw;
+        }
+
+        main ol {
+        list-style: disc;
+        }
+
+        main li {
+        margin-top: 5px;
+        }
+
+        .main-section {
+        text-align: justify;
+        padding-top: 50px;
+        min-height: 100vh;
+        }
+
+        code{
+        background-color: rgb(230, 255, 225);
+        display:block;
+        line-height: 2;
+        white-space: pre;
+        word-wrap: normal;
+        border-radius:5px;
+        padding: 5px;
+        padding-left: 10px;
+        }
+
+        .view-div {
+          background-color:gray;
+          width: 100vw;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          position: fixed;
+          left: 0px;
+          bottom: 0px;
+        }
+
+        .view {
+          width:50px;
+          margin-right: 10px;
+          background-color:rgb(40, 71, 40);
+          color: white;
+          text-align: center;
+          border-radius: 5px;
+          margin: 10px;
+        }
+
+        @media(max-width: 810px) {
+        #navbar {
+            position: relative;
+            width: 100%;
+            border-style: none;
+            height: auto;
+        }
+        #nav-list {
+            max-height: 35vh;
+            width: 100%;
+        }
+
+        
+        main {
+            margin: auto;
+            margin-left: 1vw;
+            margin-right: 1vw;
+        }
+        }
+
+        @media(max-width: 500px) {
+        body {
+            font-size: 90%;
+        }
+        }
+
+        @media(max-width: 400px) {
+        body {
+            font-size: 80%;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>
+          <img src="circle.png" alt="circle" height="100px" width="120px">
+          <!-- <h1>JS <i class="far fa-compact-disc"></i></h1> -->
+        </header>
+        <ol id="nav-list">
+          <a href="#student" class="nav-link">
+            
+            <li><img src="person.png" alt="circle" height="100px" width="100px">Student</li></a>
+          <a href="#lessonplan" class="nav-link"><li><img src="Book.png" alt="circle" height="90px" width="100px">Lesson Plan </li></a>
+          <a href="#setting" class="nav-link"><li><img src="Setting.png" alt="circle" height="100px" width="100px">Setting</li></a>
+          
+        </ol>
+      </nav>
+      
+      
+      <main id="main-doc">
+        <section id="student" class="main-section">
+          <header>
+            <h2>Introduction</h2>
+          </header>
+          <article>
+          <p>
+            JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+          </p>
+          <p>
+            JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+            <ol>
+              <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+              <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+            </ol>
+          </p>
+          </article>
+        </section>
+        
+        <section id="lessonplan" class="main-section">
+          <header>
+            <h2>What you should already know</h2>
+          </header>
+          <article>
+          <p>This guide assumes you have the following basic background:</p>
+          <p>
+            <ol>
+              <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+              <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+              <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+            </ol>
+          </p>
+          </article>
+        </section>
+    
+        <section id="setting" class="main-section">
+          <header>
+            <h2>JavaScript and Java</h2>
+          </header>
+          <article>
+          <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+          <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+          <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+          </article>
+        </section>
+        
+        
+      </main>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+</body>
+</html>
